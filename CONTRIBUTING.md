@@ -47,13 +47,14 @@ How to run locally:
 
 2. move into the `frontend` folder 
 3. Install all projects dependencies using `npm install` or `yarn`
-4. Start frontend development server. `npm run dev` or `yarn start`.
+4. Start frontend development server. `npm start`. this should startup a local server at `http://localhost:3000`
+
 
 #### Backend.
 
 2. move into the `backend` folder 
 3. Install all projects dependencies using `npm install`.
-4. Start backend server locally.. `npm start`. This should startup a local server at `http://localhost:3000`
+4. Start backend server locally.. `npm run dev`. This should startup a local server at `http://localhost:5000`
 5. Start make sure MongoDB server.
 
 ## Issues
