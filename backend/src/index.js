@@ -8,8 +8,8 @@ const app = express();
 app.use(cors());  //cors prevents cors error from the front end api
 
 //Testing the app to ensure is running 
-app.get("/", (req, resp) => {
-    resp.send("Feedback app is running...")
+app.get("/", (req, res) => {
+    res.send("Feedback app is running...")
 });
 
 app.listen(5000);
