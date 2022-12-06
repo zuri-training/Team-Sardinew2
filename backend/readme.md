@@ -76,4 +76,4 @@ npm install
 ```
 npm start
 ```
-  Navigate to `http://localhost:{port}`
+ Navigate to `http://localhost:{port}`
