@@ -56,7 +56,7 @@ The folder structure of this app is explained below:
 | **src**                  | Contains  source code that will be compiled to the dist dir                               |
 | **src/config**           | Application configuration including environment-specific configs 
 | **src/controller**       | Controllers define functions to serve various express routes. 
-| **src/routes**           | Contain all express routes, separated by module/area of application                       
+| **src/router**           | Contain all express routes, separated by module/area of application                       
 | **src/model**            | Models define schemas that will be used in storing and retrieving data from Application database  |
 | **index.js**             | Entry point to express app                                                               |
 | package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)   |     
