@@ -63,7 +63,7 @@ The folder structure of this app is explained below:
 
 
 # Getting started
-- Clone the repository
+- Clone The Repository
 ```
 git clone  <git lab_template_url> <project_name>
 ```
