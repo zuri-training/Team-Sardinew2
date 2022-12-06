@@ -25,6 +25,7 @@ A platform that allows users create feedback forms to be embedded on their platf
 | :-------------------- | :-----------------------: |
 | [Frontend](frontend)        |  React  |
 | [Backend](backend)  |     NodeJS         |
+| Database  |     Mongodb       |
 
 ## Branches
 
