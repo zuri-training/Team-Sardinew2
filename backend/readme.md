@@ -65,7 +65,7 @@ The folder structure of this app is explained below:
 # Getting started
 - Clone the repository
 ```
-git clone  <git lab template url> <project_name>
+git clone  <git lab_template_url> <project_name>
 ```
 - Install dependencies
 ```
