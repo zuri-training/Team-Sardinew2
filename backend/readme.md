@@ -60,3 +60,20 @@ The folder structure of this app is explained below:
 | **src/model**            | Models define schemas that will be used in storing and retrieving data from Application database  |
 | **index.js**             | Entry point to express app                                                               |
 | package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)   |     
+
+
+# Getting started
+- Clone the repository
+```
+git clone  <git lab template url> <project_name>
+```
+- Install dependencies
+```
+cd <project_name>
+npm install
+```
+- Build and run the project
+```
+npm start
+```
+  Navigate to `http://localhost:{port}`
