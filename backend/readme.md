@@ -62,7 +62,7 @@ The folder structure of this app is explained below:
 | package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)   |     
 
 
-# Getting started
+# Getting started 
 - Clone The Repository
 ```
 git clone  <git lab_template_url> <project_name>
