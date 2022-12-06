@@ -2,7 +2,7 @@
 # feedback_gen
 A platform that allows users create feedback forms to be embedded on their platforms
 
-##Documentation
+## Documentation
 [Here's a link to the project's documentation](https://docs.google.com/document/d/16v9-9yiHbDgjZexHZVtjPUX1Mb5z1VwXgYCpEWUaYdY/edit)
 
 
