@@ -2,6 +2,11 @@
 # feedback_gen
 A platform that allows users create feedback forms to be embedded on their platforms
 
+## Documentation
+[Here's a link to the project's documentation](https://docs.google.com/document/d/16v9-9yiHbDgjZexHZVtjPUX1Mb5z1VwXgYCpEWUaYdY/edit)
+
+
+
 ## User Activity/Features
 - **User: Unauthenticated**
 --Visit the platform to view basic information about the platform
@@ -24,7 +29,8 @@ A platform that allows users create feedback forms to be embedded on their platf
 | Codebase              |      Description          |
 | :-------------------- | :-----------------------: |
 | [Frontend](frontend)        |  React  |
-| [Backend](backend)  |     NodeJS         |
+| [Backend](backend)  |     NodeJS and Mongodb       |
+
 
 ## Branches
 

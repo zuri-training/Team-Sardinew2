@@ -15,10 +15,11 @@ app.use(cors());  //cors prevents cors error from the front end api
 app.use('/user', userRoute);
 
 //Testing the app to ensure is running 
-app.get("/", (req, resp) => {
-    resp.send("Feedback app is running...")
+app.get("/", (req, res) => {
+    res.send("Feedback app is running...")
 });
 
 app.listen(PORT, () => { // server listening 
     console.log(`Server running on port ${PORT}`);
   });
+
