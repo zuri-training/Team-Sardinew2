@@ -28,21 +28,20 @@ code {
 /* LoginForm start */
 
 .container.signin-container {
-  margin-top: 6%;
+  margin-top: 4%;
 }
 
 .signin-card {
-  padding: 20px 0px 20px;
-  background: white;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  max-width: 400px;
+  max-width: 600px;
   margin: auto;
+  border-radius: 0;
+  max-width: 700px !important;
+
 }
 
 h2.headline {
   margin-bottom: -5px;
+  margin-top: 20px;
 }
 
 p.headline {
@@ -89,6 +88,10 @@ span.login-word {
 
 a {
   text-decoration: none;
+}
+
+.accoumt-question {
+  margin-top: 20%;
 }
 
 

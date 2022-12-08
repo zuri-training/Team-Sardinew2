@@ -17,7 +17,9 @@ function NavBar() {
                                 <a className="nav-link" href="/#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/#">About</a>
+                                <Link to="/#" className="nav-link">
+                                    About
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/login" className="nav-link">
@@ -30,7 +32,7 @@ function NavBar() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/contact" className="nav-link">
+                                <Link to="/#" className="nav-link">
                                     Contact
                                 </Link>
                             </li>
