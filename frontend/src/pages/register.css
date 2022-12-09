@@ -11,6 +11,7 @@ section {
 .img-logo{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    width: 100%;
 }
 
 .signUpBtn{

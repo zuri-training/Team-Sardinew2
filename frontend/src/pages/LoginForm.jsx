@@ -44,25 +44,17 @@ const LoginForm = () => {
               <h1 className='font-weight-bold py-3 '>Welcome Back....</h1>
               <p >Please enter your Email and Password</p>
               <form onSubmit={onSubmit} >
-               
-                
                   <div className="my-3">
                      <label  htmlFor='emailInput'>Email</label>
                     <input name='email' value={email}  onChange={onChange} className='form-control my-1 p-3' type="email" placeholder='Email' aria-describedby='email' id='emailInput' />
                 </div>
-             
-                
                   <div className="my-3">
                      <label  htmlFor='passwordInput'>Password</label>
                     <input name='password' value={password}  onChange={onChange} className='form-control my-1 p-3' type="password" placeholder='Password' aria-describedby='password' id='passwordInput' />
                   </div>
-                
-               
-               
                   <div className="my-3">
                     <button className='signUpBtn'  type='submit' >Login</button>
                   </div>
-             
                 <div className="my-3">
                       <label>Already have an account? <Link to={"/register"}>Sigin Up</Link>
                      </label>
