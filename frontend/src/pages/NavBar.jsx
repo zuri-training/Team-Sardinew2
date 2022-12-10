@@ -1,8 +1,18 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import {logout,reset} from '../features/auth/authSlice'
 
 function NavBar() {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { user } = useSelector((state) => state.auth)
+    
+    const onLogout = () => {
+        dispatch(logout())
+        dispatch(reset())
+        navigate("/login")
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-style">
@@ -21,16 +31,25 @@ function NavBar() {
                                     About
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/login" className="nav-link">
-                                    Login
-                                </Link>
+                            {user ? (
+                                <li>
+                                    <button onClick={onLogout} className='btn btn-primary'>Logout</button>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/register" className="nav-link">
-                                    Register
-                                </Link>
-                            </li>
+                            ) : (
+                                <>
+                                    <li className="nav-item">
+                                        <Link to="/login" className="nav-link">
+                                        Login
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/register" className="nav-link">
+                                        Register
+                                        </Link>
+                                    </li>
+                                 </>
+                            )}
+                           
                             <li className="nav-item">
                                 <Link to="/#" className="nav-link">
                                     Contact

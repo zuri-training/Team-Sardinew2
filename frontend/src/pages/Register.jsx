@@ -62,7 +62,9 @@ const Register = () => {
     }
   }
 
-  
+  if (isLoading) {
+    return (<h1 className='text-center font-weight-bold py-3'> Loading ...</h1>)
+  }
   
   return (
 
