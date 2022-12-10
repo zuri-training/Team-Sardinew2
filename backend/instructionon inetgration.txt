@@ -1,0 +1,26 @@
+user Route
+get all user  = get("http://localhost:5000/user")    
+get user by Id = get("http://localhost:5000/user/:id")
+registration/signup = post("http://localhost:5000/user") "auth" -provide name, email, password,
+update user (only name) = put("http://localhost:5000/user/:id") -provide name, email but only name is updated
+delete user by Id = delete("http://localhost:5000/user/:id")  
+login by user = post("http://localhost:5000/user/login") "auth" -provide email, password, 
+forgot password = post("http://localhost:5000/user/password-reset")
+reset/change password = post("http://localhost:5000/user/password-reset/:userId/:token") ---only password is sent (use confirm password only in frontend
+
+auth - contains "bearer token"    explode and use the [2]
+NB: password is always encypted and it is not part of data sent to frontend
+
+basic response for success 
+success: true
+message:""
+data:{}
+basic response for failed
+success: false
+message:""
+error:""
+
+
+
+
+
