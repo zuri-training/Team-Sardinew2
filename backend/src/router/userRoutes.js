@@ -7,6 +7,8 @@ router
 .post("/", userController.addUser)
 .put("/:id", userController.updateUser)
 .delete("/:id", userController.deleteUser)
-.post("/login", userController.login);
+.post("/login", userController.login)
+.post("/password-reset", userController.forgotPassword)
+.post("/password-reset/:userId/:token", userController.resetPassword);
 
 module.exports = router;
