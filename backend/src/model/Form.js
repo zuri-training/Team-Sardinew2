@@ -7,5 +7,5 @@ const feedbackSchema = new mongoose.Schema({
   },
 });
 
-const Feed = mongoose.model("Feed", feedbackSchema);
-module.exports = Feed;
+const Form = mongoose.model("Form", feedbackSchema);
+module.exports = Form;
