@@ -5,11 +5,11 @@ const feedbackSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Enter Your Feedback"],
   },
-  userId: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    ref: "user",
-  },
+  // user: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   required: true,
+  //   ref: "User",
+  // },
 
   createdAt: {
     type: Date,

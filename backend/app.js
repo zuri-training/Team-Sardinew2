@@ -7,6 +7,7 @@ const app = express();
 
 app.use(express.json()); ////middleware to help get data from postman in json form
 app.use(cors()); //cors prevents cors error from the front end api
+app.use(express.urlencoded({ extended: true }));
 
 //call app routes here
 app.use("/user", userRoute);
