@@ -1,3 +1,5 @@
+NB:https://feedback-api-fi7m.onrender.com/  
+
 user Route
 get all user  = get("http://localhost:5000/user")    
 get user by Id = get("http://localhost:5000/user/:id")
@@ -21,6 +23,50 @@ message:""
 error:""
 
 
+RESPONSE
+NB access with authorization
+Input fields: form_id, form_title, user_id, name, email, response[question, answer]
+
+user_Id can be gotten from the auth of the user that is logged in
+form_id is gotten from the form get, it will be the _id object of form 
+.get("/", auth, responseController.getAllResponse)
+.get("/:id", auth, responseController.getResponseById)
+.post("/", auth, responseController.addResponse)
+.put("/:id", auth, responseController.updateResponse)
+.delete("/:id", auth, responseController.deleteResponse);
+
+
+
+FORM 
+userId, title, image, name, details, isResponseOnce
+NB: image experts a string e.g 344432.jpg (store the image in a folder in frontend and send the name to db)
+router.post("/", auth, formController.createForm);
+router.get("/", auth, formController.getForms);
+router.get("/getone/:id", auth, formController.getForm);
+router.patch("/:id",auth,  formController.updateForm);
+router.delete("/:id", auth,  formController.deleteForm);
+
+sample Input{
+ {
+    "userId": "6394290920d6c6fe3048d6e9",
+    "title": "2023 Election Poll",
+    "image": "6394290920d6c6.jpg",
+    "details":[
+        {
+            "formField":"Who will you vote for",
+            "formType":"option",
+            "isRequired":true,
+            "isMulti":false
+        },
+        {
+            "formField":"Why would you vote for him",
+            "formType":"text",
+            "isRequired":false,
+            "isMulti":true
+        }
+    ],
+    "isResponseOnce": true
+}
 
 
 
