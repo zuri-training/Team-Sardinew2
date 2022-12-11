@@ -30,7 +30,7 @@ const LoginForm = () => {
 
     // success
     if (isSuccess || user) {
-      navigate('/')
+      navigate('/dashboard')
     }
     dispatch(reset())
 }, [isError,isSuccess,user,navigate,message,dispatch])
