@@ -17,9 +17,9 @@ exports.getAllUsers = async (req, res) =>{
         if(users.length === 0){
             return res.status(404).json({success:false, message:'No User was Found' });
         }
-        res.status(200).json({success:true, message:"Users Found", data:users });
+        return res.status(200).json({success:true, message:"Users Found", data:users });
     }catch(error){
-        res.status(500).json({success:false, message:'Internal Server Error', error: error.message});
+        return res.status(500).json({success:false, message:'Internal Server Error', error: error.message});
     }
 }
 
@@ -32,7 +32,7 @@ exports.getUserById = async (req, res) =>{
         }
         return res.status(200).json({success:true, message:"User Found!", data:user});
     }catch(error){
-        res.status(500).json({success:false, message:"Internal Server Error", error: error.message});
+        return res.status(500).json({success:false, message:"Internal Server Error", error: error.message});
     }
 }
 
@@ -41,7 +41,7 @@ exports.addUser = async (req, res) =>{
         const { name, email, password} = req.body; //get user input
 
         if(!(name && email && password)){ //validate user input
-            res.status(400).json({success:false, message:"All input is required!"});
+            return res.status(400).json({success:false, message:"All input is required!"});
         }
 
         const checkUser = await User.findOne({email}); //Validate if user already exists in the DB
@@ -62,7 +62,7 @@ exports.addUser = async (req, res) =>{
 
             Jwt.sign({result}, jwtKey, {expiresIn:"2h"} , (err, token) => {  //create token
                 if(err){
-                    res.status(500).json({success:false, message: "Something went wrong, please try after sometime", error: err.message});
+                    return res.status(500).json({success:false, message: "Something went wrong, please try after sometime", error: err.message});
                 }
                 ///send email
                 let fname = user.name.split(" ")[0];
@@ -81,7 +81,7 @@ exports.addUser = async (req, res) =>{
             return res.status(400).json({success:false, message:"User creation failed!"});
         }
     }catch(error){
-        res.status(500).json({success:false, message: "Internal Server Error", error: error.message});
+        return res.status(500).json({success:false, message: "Internal Server Error", error: error.message});
     }
 }
 
@@ -91,7 +91,7 @@ exports.updateUser = async (req, res) =>{
         const { name, email} = req.body; //get user input
 
         if(!(name && email)){ //validate user input
-            res.status(400).json({success:false, message:"All input is required!"});
+            return res.status(400).json({success:false, message:"All input is required!"});
         }
 
         const checkUser = await User.findOne({email}); //Validate if user already exists in the DB
@@ -112,7 +112,7 @@ exports.updateUser = async (req, res) =>{
         }
         return res.status(200).json({success:true, message: "User Updated Successfully", data:result});
     }catch(error){
-        res.status(500).json({success:false, message: "Error occurred while trying to Update User", error: error.message});
+        return res.status(500).json({success:false, message: "Error occurred while trying to Update User", error: error.message});
     }
 }
 
@@ -125,7 +125,7 @@ exports.deleteUser = async (req, res) =>{
         }
         return res.status(200).json({success:true, message: "User deleted Successfully", data:result});
     }catch(error){
-        res.status(500).json({success:false, message: "Error occurred while trying to delete", error: error.message});
+        return res.status(500).json({success:false, message: "Error occurred while trying to delete", error: error.message});
     }
 }
 
@@ -135,7 +135,7 @@ exports.login = async (req, res)=>{
     try{
         const {email, password} = req.body; //get user details
         if(!(email && password)){  //validate user input
-            res.status(400).json({success:false, message:"Email and Password are required!"});
+            return res.status(400).json({success:false, message:"Email and Password are required!"});
         }
 
         const user = await User.findOne({email});  //check if user exists
@@ -154,7 +154,7 @@ exports.login = async (req, res)=>{
             return res.status(404).json({success:false, message:"Invalid Credential!"});
         }  
     }catch(error){
-        res.status(501).json({success:false, message:"Internal Server error", error: error.message});
+        return res.status(501).json({success:false, message:"Internal Server error", error: error.message});
 
     }
 }
@@ -165,7 +165,7 @@ exports.forgotPassword = async (req, res)=>{
     try{
         const { email } = req.body; //get email input
         if(!email){ //validate email input
-            res.status(400).json({success:false, message:"Email is required!"});
+            return res.status(400).json({success:false, message:"Email is required!"});
         }
        
         const user = await User.findOne({email}); //Validate if user already exists in the DB
@@ -196,17 +196,15 @@ exports.forgotPassword = async (req, res)=>{
         return res.status(200).json({success:true, message: "Verification email has been sent to you Successfully"});
     
     }catch(error){
-        res.status(500).json({success:false, message: "Error occurred while trying to send Email", error: error.message});
+        return res.status(500).json({success:false, message: "Error occurred while trying to send Email", error: error.message});
     }
 }
 //Reset User password
 exports.resetPassword = async (req, res)=>{
-   //return res.status(200).json({success:true, id: req.params.userId, token: req.params.token});
-      
         try{
         const { password } = req.body; //get password input
         if(!password){ //validate email input
-            res.status(400).json({success:false, message:"Password is required!"});
+            return res.status(400).json({success:false, message:"Password is required!"});
         }
         
         const user = await User.findById(req.params.userId); //Check if user with such ID exists
@@ -226,6 +224,6 @@ exports.resetPassword = async (req, res)=>{
         return res.status(200).json({success:true, message: "password reset sucessfully"});
 
     }catch(error){
-        res.status(500).json({success:false, message: "Error occurred while trying to change password", error: error.message});
+        return res.status(500).json({success:false, message: "Error occurred while trying to change password", error: error.message});
     }
 }

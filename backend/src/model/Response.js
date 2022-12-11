@@ -13,7 +13,11 @@ const responseSchema = new Schema({
         minlength:3,
         maxlength:30
     },
-    full_name:{
+    user_id:{
+        type:String,
+        required:true
+    },
+    name:{
         type:String,
         required:true,
         minlength:5,
@@ -27,15 +31,15 @@ const responseSchema = new Schema({
     },
     response:[{
         question:{
-            type:string
+            type:String
         },
         answer:{
-            type:string
+            type:String
         }
     }],
 },
 {timestamps:true}
 );
 
-const responseModel = model ("responses", userSchema);  //responses = name of DB table
+const responseModel = model ("responses", responseSchema);  //responses = name of DB table
 module.exports = responseModel;
