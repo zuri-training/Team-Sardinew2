@@ -74,6 +74,6 @@ npm install
 ```
 - Build and run the project
 ```
-npm start
+npm run dev
 ```
  Navigate to `http://localhost:{port}`
