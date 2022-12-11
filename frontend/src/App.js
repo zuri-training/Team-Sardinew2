@@ -1,21 +1,27 @@
 import "./App.css";
-// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import NavBar from "./component/NavBar";
 import Home from "./pages/Home";
 import LoginForm from "./pages/LoginForm";
 import Register from "./pages/Register";
 import NotFound from "./pages/Not-found";
+import Dashboard from "./pages/Dashboard";
+
 function App() {
   return (
     <>
+      <NavBar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/dashboard" element={Dashboard} />
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ToastContainer />
     </>
   );
 }
