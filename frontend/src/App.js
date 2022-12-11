@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import LoginForm from "./pages/LoginForm";
 import Register from "./pages/Register";
 import NotFound from "./pages/Not-found";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/dashboard" element={Dashboard} />
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

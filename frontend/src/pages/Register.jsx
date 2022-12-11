@@ -31,7 +31,7 @@ const Register = () => {
 
     // success
     if (isSuccess || user) {
-      navigate('/')
+      navigate('/login')
     }
     dispatch(reset())
 }, [isError,isSuccess,user,navigate,message,dispatch])
@@ -93,7 +93,7 @@ const Register = () => {
                 </div>
                 <div className=" my-3">
                      <label  htmlFor='cpasswordInput'>Confirm Password</label>
-                    <input name='cpassword' value={cpassword} onChange={onChange} className='form-control p-3 inputStyle' type="cpassword" placeholder='Confirm Password' aria-describedby='cpassword' id='cpasswordInput' />
+                    <input name='cpassword' value={cpassword} onChange={onChange} className='form-control p-3 inputStyle' type="password" placeholder='Confirm Password' aria-describedby='cpassword' id='cpasswordInput' />
                     <div className="form-text" id="cpasswordInput" >Password must not less than 8 character</div>
                   </div>
                
