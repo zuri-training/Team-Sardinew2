@@ -1,5 +1,5 @@
 const express = require("express");
-const auth =require('../middleware/auth')
+const auth = require("../middleware/auth");
 const formController = require("../controller/formController");
 
 const router = express.Router();
@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/", auth, formController.createForm);
 router.get("/", auth, formController.getForms);
 router.get("/:id", auth, formController.getForm);
-router.patch("/:id",auth,  formController.updateForm);
-router.delete("/:id", auth,  formController.deleteForm);
+router.patch("/:id", auth, formController.updateForm);
+router.delete("/:id", auth, formController.deleteForm);
 
 module.exports = router;
