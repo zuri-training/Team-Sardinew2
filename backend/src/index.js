@@ -6,6 +6,7 @@ const userRoute = require("./router/userRoutes");
 const responseRoute = require("./router/responseRoutes");
 const templateForm = require("./router/templateFormRoutes");
 
+const formRoute = require("./router/formRoutes");
 connect();  //displays connects status on the console
 
 const app = express();
@@ -18,6 +19,7 @@ app.use(cors());  //cors prevents cors error from the front end api
 //call app routes here
 app.use('/user', userRoute);
 app.use('/response', responseRoute);
+app.use('/form', formRoute);
 app.use("/templateForm",templateForm);
 
 //Testing the app to ensure is running 
