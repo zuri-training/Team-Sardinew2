@@ -29,3 +29,17 @@ background: #d2c2b1;
 color: black;
 font-weight: bold;
 }
+
+.img-fb-logo{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 150px;
+    height: 150px;
+    /* border-radius: 10px; */
+}
+.invalid-input{
+    display: block;
+    color: red;
+    margin-top: -20px;
+    margin-left: 0px;
+  }

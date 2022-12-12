@@ -82,6 +82,8 @@ const LoginForm = () => {
                      <label  htmlFor='passwordInput'>Password</label>
                     <input name='password' value={password}  onChange={onChange} className='form-control my-1 p-3' type="password" placeholder='Password' aria-describedby='password' id='passwordInput' />
                   </div>
+                  <div className="my-3"><Link to={"/forgotPassword"}>Forgot password?</Link></div>
+
                   <div className="my-3">
                     <button className='signUpBtn'  type='submit' >Login</button>
                   </div>
