@@ -1,4 +1,7 @@
 const express = require("express");
+<<<<<<<<< Temporary merge branch 1
+const feedbackController = require("../controller/formController");
+=========
 const auth =require('../middleware/auth')
 const formController = require("../controller/formController");
 
@@ -8,7 +11,7 @@ const router = express.Router();
 router.post("/", auth, formController.createForm);
 router.get("/", auth, formController.getForms);
 router.get("/:id", auth, formController.getForm);
-router.patch("/:id",auth,  formController.updateForm);
-router.delete("/:id", auth,  formController.deleteForm);
+router.patch("/:id", auth, formController.updateForm);
+router.delete("/:id", auth, formController.deleteForm);
 
 module.exports = router;
