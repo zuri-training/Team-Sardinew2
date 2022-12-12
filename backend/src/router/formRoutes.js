@@ -1,13 +1,14 @@
 const express = require("express");
-const feedbackController = require("../controller/formController");
+const auth = require("../middleware/auth");
+const formController = require("../controller/formController");
 
 const router = express.Router();
 
 //Specified routes
-router.post("/generatefeedback", feedbackController.createFeedback);
-router.get("/feedbacks", feedbackController.getFeeds);
-router.get("/getone/:id", feedbackController.getFeedback);
-router.patch("/update/:id", feedbackController.updateFeedback);
-router.delete("/delete/:id", feedbackController.deleteFeedback);
+router.post("/", auth, formController.createForm);
+router.get("/", auth, formController.getForms);
+router.get("/:id", auth, formController.getForm);
+router.patch("/:id", auth, formController.updateForm);
+router.delete("/:id", auth, formController.deleteForm);
 
 module.exports = router;
