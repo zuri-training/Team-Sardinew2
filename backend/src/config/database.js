@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
-const {config} = require('dotenv');
-config();
 
-function connect(uri){
+
+ function connect(){
     try{
         mongoose.set('strictQuery', true);
-        mongoose.connect(uri || process.env.MONGO_DB_LOCAL)
-        console.log("Connected to MondoDB")
+        mongoose.connect("mongodb://localhost:27017/feedback_gen");
+        console.log("Connected to MongoDB")
     }catch(error){
         console.log(error.message)
     }

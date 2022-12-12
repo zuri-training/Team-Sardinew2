@@ -1,0 +1,15 @@
+@url = "http://localhost:5000/"
+
+GET http://localhost:5000/templateForm/ HTTP/1.1
+
+###
+POST http://localhost:5000/templateForm/ HTTP/1.1
+Content-Type:  application/json
+
+{
+  "form_title" : "mon",
+  "form_field" : "its for work"
+  
+
+}
+
