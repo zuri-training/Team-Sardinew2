@@ -1,6 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch, } from 'react-redux'
+import { toast } from 'react-toastify'
+import {login, reset} from '../features/auth/authSlice'
 import logo from "../assets/images/Frame.png";
 
 
@@ -15,6 +18,22 @@ const LoginForm = () => {
   })
 
   const { email, password } = formData;
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const { user, isLoading, isSuccess, isError, message } = useSelector((state) => state.auth)
+  // use Effect
+    useEffect(() => {
+    if (isError) {
+      toast.error(message)
+    }
+
+    // success
+    if (isSuccess || user) {
+      navigate('/dashboard')
+    }
+    dispatch(reset())
+}, [isError,isSuccess,user,navigate,message,dispatch])
   // On change function
   const onChange = (e) => {
     setFormDate((prevState) => ({
@@ -26,8 +45,19 @@ const LoginForm = () => {
 
 
   const onSubmit = e => {
-  e.preventDefault()
-}
+    e.preventDefault()
+    // console.log(formData)
+    const userData = {
+      email,
+      password
+    }
+    dispatch(login(userData))
+  }
+  
+   if (isLoading) {
+    return (<h1 className='text-center font-weight-bold py-3'> Loading ...</h1>)
+  }
+  
 
 
   return (
