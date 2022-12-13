@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, } from "@reduxjs/toolkit"; //createAction
+import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import authService from "./authService";
 
 // get user from localstorage
