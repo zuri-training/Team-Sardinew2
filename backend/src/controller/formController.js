@@ -1,5 +1,4 @@
-
-const {trusted} = require('mongoose');
+const { trusted } = require("mongoose");
 const Form = require("../model/Form");
 
 //CRUD OPERATIONS
@@ -122,72 +121,12 @@ exports.updateForm = async (req, res) => {
   } catch (err) {
     return res.status(404).json({
       success: false,
-      message:'Internal Server Error', 
-      error: err.message
->>>>>>>>> Temporary merge branch 2
+      message: "Internal Server Error",
+      error: err.message,
     });
   }
 };
 
-<<<<<<<<< Temporary merge branch 1
-//create a Feedback- POST
-exports.createFeedback = async (req, res) => {
-  const newFeedback = await Form.create(req.body);
-  try {
-    res.status(201).json({
-      status: "success",
-      data: {
-        feedback: newFeedback,
-      },
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: "fail",
-      message: err,
-    });
-  }
-};
-
-//Update Feedback-PATCH
-exports.updateFeedback = async (req, res) => {
-  try {
-    const feedback = await Form.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
-    res.status(200).json({
-      status: "success",
-      data: {
-        feedback,
-      },
-    });
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: err,
-    });
-  }
-};
-
-//delete Feedback-DELETE
-exports.deleteFeedback = async (req, res) => {
-  try {
-    await Form.findByIdAndDelete(req.params.id);
-
-    res.status(204).json({
-      status: "success",
-      data: null,
-    });
-  } catch (err) {
-    res.status(404).json({
-      status: "fail",
-      message: err,
-    });
-  }
-};
-=========
-
-=======
->>>>>>> 5be8ba077beffd40f250f774fe3dd6cc9bfae0a3
 //delete Form-DELETE
 exports.deleteForm = async (req, res) => {
   try {

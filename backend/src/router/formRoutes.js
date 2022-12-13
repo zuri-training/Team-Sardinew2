@@ -1,8 +1,6 @@
 const express = require("express");
-<<<<<<<<< Temporary merge branch 1
-const feedbackController = require("../controller/formController");
-=========
-const auth =require('../middleware/auth')
+
+const auth = require("../middleware/auth");
 const formController = require("../controller/formController");
 
 const router = express.Router();
