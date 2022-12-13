@@ -1,0 +1,30 @@
+.question_form{
+    background-color:#f4f4f9;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+.section{
+    margin: auto;
+    width: 50%;
+}
+.question_form_top{
+    background-color: white;
+    border-top: 8px solid grey;
+    border-radius: 8px;
+    padding: 30px 25px;
+    text-transform: capitalize;
+}
+.question_form_top_name{
+    box-sizing: border-box;
+    font-size: 32px;
+    line-height: 40px;
+    line-height: 135%; 
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 1px solid #f4f4f9;
+    color: black;
+
+}
