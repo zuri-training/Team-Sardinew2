@@ -51,7 +51,8 @@ const Question_form = () => {
                                       <input type={ques.questionType} />
                                       <label key={ques.questionText}>{ op.optionText}</label>
                               </div>
-                          ))}</div>
+                              ))}
+                              </div>
                       </div>
                       </div>
                   )
