@@ -13,6 +13,7 @@ const Form = () => {
             "list": []
         }
         setformContent([...formContent, field])
+        console.log(formContent)
     }
     const editField = (fieldName, fieldLabel) => {
         const formFeilds = [...formContent];

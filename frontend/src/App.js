@@ -26,7 +26,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
         <Route path="test" element={<Test />} />
-        <Route path="form" element={<Form />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
       <ToastContainer />
     </>
