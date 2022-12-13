@@ -14,11 +14,15 @@ const responseSchema = new Schema(
       minlength: 3,
       maxlength: 30,
     },
-    full_name: {
-      type: String,
-      required: true,
-      minlength: 5,
-      maxlength: 100,
+    user_id:{
+        type:String,
+        required:true
+    },
+    name:{
+        type:String,
+        required:true,
+        minlength:5,
+        maxlength:100
     },
     email: {
       type: String,
@@ -26,19 +30,17 @@ const responseSchema = new Schema(
       minlength: 5,
       maxlength: 100,
     },
-    response: [
-      {
-        question: {
-          type: string,
+    response:[{
+        question:{
+            type:String
         },
-        answer: {
-          type: string,
-        },
-      },
-    ],
-  },
-  { timestamps: true }
+        answer:{
+            type:String
+        }
+    }],
+},
+{timestamps:true}
 );
 
-const responseModel = model("responses", responseSchema); //responses = name of DB table
+const responseModel = model ("responses", responseSchema);  //responses = name of DB table
 module.exports = responseModel;
