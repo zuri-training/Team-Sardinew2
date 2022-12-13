@@ -8,6 +8,9 @@ import LoginForm from "./pages/LoginForm";
 import Register from "./pages/Register";
 import NotFound from "./pages/Not-found";
 import Dashboard from "./pages/Dashboard";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import VerifiedPassword from "./pages/Verified-password";
 
 function App() {
   return (
@@ -19,6 +22,10 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/dashboard" element={Dashboard} />
         <Route path="/home" element={<Home />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/resetPassword/:userId/:token" element={<ResetPassword />} />
+        <Route path="/verified-password" element={<VerifiedPassword />} />
+  
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
