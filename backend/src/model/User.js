@@ -1,32 +1,40 @@
-const {Schema, model} = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const userSchema = new Schema({
-    name:{
-        type:String,
-        required:true,
-        minlength:3,
-        maxlength:30
+const userSchema = new Schema(
+  {
+    full_name: {
+      type: String,
+      required: true,
+      minlength: 5,
+      maxlength: 100,
     },
-    email:{
-        type:String,
-        required:true,
-        unique:true,
-        minlength:5,
-        maxlength:100
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+      minlength: 3,
+      maxlength: 30,
     },
-    password:{
-        type:String,
-        required:true,
-        minlength:5,
-        maxlength:100
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      minlength: 5,
+      maxlength: 100,
     },
-    active:{
-        type:Boolean,
-        default:false,
+    password: {
+      type: String,
+      required: true,
+      minlength: 5,
+      maxlength: 100,
     },
-},
-{timestamps:true}
+    active: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
 );
 
-const userModel = model ("users", userSchema);  //users = name of DB table
+const userModel = model("users", userSchema); //users = name of DB table
 module.exports = userModel;
