@@ -1,11 +1,12 @@
 const router = require("express").Router();
+const auth = require('../middleware/auth');  //this will be used here
 const responseController = require("../controller/responseController");
 
 router
-.get("/", responseController.getAllResponse)
-.get("/:id", responseController.getResponseById)
-.post("/", responseController.addResponse)
-.put("/:id", responseController.updateResponse)
-.delete("/:id", responseController.deleteResponse);
+.get("/", auth, responseController.getAllResponse)
+.get("/:id", auth, responseController.getResponseById)
+.post("/", auth, responseController.addResponse)
+.put("/:id", auth, responseController.updateResponse)
+.delete("/:id", auth, responseController.deleteResponse);
 
 module.exports = router;

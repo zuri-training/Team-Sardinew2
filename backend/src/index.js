@@ -3,6 +3,7 @@ const connect = require("./config/database");
 const cors =require("cors");
 const userRoute = require("./router/userRoutes");
 const responseRoute = require("./router/responseRoutes");
+const formRoute = require("./router/formRoutes");
 connect();  //displays connects status on the console
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());  //cors prevents cors error from the front end api
 //call app routes here
 app.use('/user', userRoute);
 app.use('/response', responseRoute);
+app.use('/form', formRoute);
 
 //Testing the app to ensure is running 
 app.get("/", (req, res) => {
