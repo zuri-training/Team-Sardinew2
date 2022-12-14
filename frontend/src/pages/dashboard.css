@@ -68,8 +68,12 @@
 
 .plus-text {
     text-align: center;
-    margin-top: 30%;
+    padding: 100px;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
 }
+
 
 .right-section {
     background: #fff !important;

@@ -2,7 +2,6 @@ import React from 'react';
 import './home.css';
 // import '../assets/images';
 import { Link } from "react-router-dom";
-import feedbacker from "../assets/images/feedbacker.png";
 import frame1 from "../assets/images/Frame1.png";
 import frame2 from "../assets/images/Frame2.png";
 import frame3 from "../assets/images/Frame3.png";
@@ -22,37 +21,7 @@ import visa from "../assets/images/Visa.png";
 const Home = () => {
   return (
     <div>
-      <section id="nav-bar">
-        <nav className="navbar navbar-expand-lg navbar-light">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="/#"><img src={feedbacker} alt='...' />Feedbacker</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/#">Home</Link>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#about">About Us</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#services">How it Works</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#testimonial">Testimonials</a>
-                </li>
-
-              </ul>
-              <form className="d-flex" role="search">
-                <button className="btn btn-outline-success login" type="submit"><Link to="/login" className='login'>Log in</Link></button>
-                <button className="btn btn-outline-success signup" type="submit"><Link to="/register" className='signup'>Sign Up</Link></button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </section>
+   
 
       {/* banner section */}
       <section id="banner">

@@ -1,10 +1,8 @@
 
-
-
 import React from 'react';
 import './dashboard.css';
-
-// import { Link } from "react-router-dom";
+import uuid from 'react-uuid';
+import { Link } from "react-router-dom";
 import feedbacker from "../assets/images/feedbacker.png";
 import ellipse2 from "../assets/images/Ellipse2.png";
 import formQuestion from "../assets/images/Form-question.png";
@@ -13,31 +11,33 @@ import vector1 from "../assets/images/Vector1.png";
 import vector2 from "../assets/images/Vector2.png";
 import vector3 from "../assets/images/Vector3.png";
 import vector4 from "../assets/images/vector4.png";
-
 import vector5 from "../assets/images/Vector5.png";
 
 
-
 const Dashboard = () => {
+  
+
+  const id = uuid()
+ 
   return (
     <div>
       <section id="dashboard">
-        <div class="row">
-          <div class="col-4 section-left">
-            <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
-              <section class="section-left fixed">
-                <div class="container left-div">
-                  <a class="navbar-brand nav-headline" href="/#"><img src={feedbacker} class="img-feeder" alt='...' />Feedbacker</a>
+        <div className="row">
+          <div className="col-4 section-left">
+            <div id="simple-list-example" className="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+              <section className="section-left fixed">
+                <div className="container left-div">
+                  <a className="navbar-brand nav-headline" href="/#"><img src={feedbacker} className="img-feeder" alt='...' />Feedbacker</a>
                 </div>
-                <div class="container left-div">
-                  <a class="navbar-brand" href="/#"><img src={vector3} class="img-feeder" alt='...' />Dashboard</a>
+                <div className="container left-div">
+                  <a className="navbar-brand" href="/#"><img src={vector3} className="img-feeder" alt='...' />Dashboard</a>
                 </div>
-                <div class="container left-div">
-                  <a class="navbar-brand" href="/#"><img src={vector1} class=" img-feeder" alt='...' />Create Form</a>
+                <div className="container left-div">
+                  <Link to={`/form/${id}`} className="navbar-brand" href="/#"><img src={vector1} className=" img-feeder" alt='...' />Create Form</Link>
                 </div>
-                <a class="navbar-brand" href="/#"><img src={vector1} class=" img-feeder" alt='...' />Create Form</a>
-                <div class="dropdown">
-                  <a class="navbar-brand" href="/#"><img src={vector4} class=" img-feeder" alt='...' /></a>
+                {/* <a className="navbar-brand" href="/#"><img src={vector1} className=" img-feeder" alt='...' />Create Form</a> */}
+                <div className="dropdown">
+                  <a className="navbar-brand" href="/#"><img src={vector4} className=" img-feeder" alt='...' /></a>
 
                   <select id="dropdown" name="referrer">
                     <option value="">Overview</option>
@@ -48,60 +48,60 @@ const Dashboard = () => {
                   </select>
 
                 </div>
-                <div class="container left-div">
-                  <a class="navbar-brand" href="/#"><img src={vector} class="img-feeder" alt='...' />Settings</a>
+                <div className="container left-div">
+                  <a className="navbar-brand" href="/#"><img src={vector} className="img-feeder" alt='...' />Settings</a>
                 </div>
-                <div class="container left-div">
-                  <button class="btn btn-white"><img src={vector5} class="img-feeder" alt='...' />Log Out</button>
+                <div className="container left-div">
+                  <button className="btn btn-white"><img src={vector5} className="img-feeder" alt='...' />Log Out</button>
                 </div>
 
 
               </section>
             </div>
           </div>
-          <div class="col-8 right-section">
-            <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-              <section class="input-top">
-                <div class="container">
-                  <div class="row right-section">
-                    <div class="col-10 right-section">
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <div className="col-8 right-section">
+            <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" className="scrollspy-example" tabindex="0">
+              <section className="input-top">
+                <div className="container">
+                  <div className="row right-section">
+                    <div className="col-10 right-section">
+                      <form className="d-flex" role="search">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                       </form>
                     </div>
-                    <div class="col-1">
-                      <a class="navbar-brand" href="/#"><img src={vector2} class="img-feeder" alt='...' /></a>
+                    <div className="col-1">
+                      <a className="navbar-brand" href="/#"><img src={vector2} className="img-feeder" alt='...' /></a>
                     </div>
-                    <div class="col-1 right-section">
-                      <a class="navbar-brand" href="/#"><img src={ellipse2} class="img-feeder" alt='...' /></a>
+                    <div className="col-1 right-section">
+                      <a className="navbar-brand" href="/#"><img src={ellipse2} className="img-feeder" alt='...' /></a>
                     </div>
                   </div>
                 </div>
               </section>
-              <section class="">
-                <div class="container card-container right-section">
-                  <label class="card-headline">Create a New Form</label>
-                  <div class="row right-section">
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
-                          <p class="plus-text">+</p>
+              <section className="">
+                <div className="container card-container right-section">
+                  <label className="card-headline">Create a New Form</label>
+                  <div className="row right-section">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
+                          <p ><Link to={`/form/${id}`}  className="plus-text"> +</Link></p>
                         </div>
                       </div>
                       <label>Blank</label>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>
                       <label>Assessment</label>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
-                          <img src={formQuestion} class="img-fluid" alt="..." />
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
+                          <img src={formQuestion} className="img-fluid" alt="..." />
                         </div>
                       </div>
                       <label>Customer Feedback</label>
@@ -109,27 +109,27 @@ const Dashboard = () => {
                   </div>
                 </div>
               </section>
-              <section class="">
-                <div class="container card-container right-section">
-                  <label class="card-headline">Recently Created Forms</label>
-                  <div class="row right-section">
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+              <section className="">
+                <div className="container card-container right-section">
+                  <label className="card-headline">Recently Created Forms</label>
+                  <div className="row right-section">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>
@@ -137,27 +137,27 @@ const Dashboard = () => {
                   </div>
                 </div>
               </section>
-              <section class="">
-                <div class="container card-container right-section">
-                  <label class="card-headline">Templates</label>
-                  <div class="row right-section">
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+              <section className="">
+                <div className="container card-container right-section">
+                  <label className="card-headline">Templates</label>
+                  <div className="row right-section">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-card">
-                        <div class="card-body">
+                    <div className="col-md-4">
+                      <div className="card text-card">
+                        <div className="card-body">
 
                         </div>
                       </div>

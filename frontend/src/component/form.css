@@ -1,0 +1,25 @@
+.addBtn{
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #C19A6F;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+.addBtn:hover {
+    background: #d2c2b1;
+    color: black;
+    font-weight: bold;
+}
+.addOptionBtn{
+    width: 50px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.quuestionSelector{
+    padding: 10px;
+}

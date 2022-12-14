@@ -32,6 +32,8 @@ const Register = () => {
     // success
     if (isSuccess || user) {
       navigate('/dashboard')
+      toast.success("Registration Successful")
+
     }
     dispatch(reset())
 }, [isError,isSuccess,user,navigate,message,dispatch])
