@@ -8,13 +8,14 @@ exports.getTemplateForms = async (req, res) => {
   TemplateForms.find({}, function (err, templates) {
     if (err) {
       res.status(401).json({
-        status: "fail",
+       success: false,
+        
         message: err,
       });
     }
 
     res.status(200).json({
-      status: "success",
+      success: true,
       results: templates.length,
       data: {
         templates,
@@ -29,7 +30,7 @@ exports.getTemplateForm = async (req, res) => {
     const template = await TemplateForms.findById(req.params.id);
 
     res.status(200).json({
-      status: "success",
+    success: true,  
 
       data: {
         template: template,
@@ -37,7 +38,7 @@ exports.getTemplateForm = async (req, res) => {
     });
   } catch (err) {
     res.status(404).json({
-      status: "fail",
+      success: false,
       message: err,
     });
   }
@@ -48,14 +49,14 @@ exports.createTemplateForm = async (req, res) => {
   const newtemplateform = await TemplateForms.create(req.body);
   try {
     res.status(201).json({
-      status: "success",
+      success: true,
       data: {
         template: newtemplateform,
       },
     });
   } catch (err) {
     res.status(400).json({
-      status: "fail",
+      success: false,
       message: err,
     });
   }
