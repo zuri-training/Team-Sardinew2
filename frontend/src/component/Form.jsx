@@ -5,8 +5,8 @@ const Form = () => {
     const [formContent, setformContent] = useState([])
     const [onEdit, setOnEdit] = useState(false)
     const [textField, setTextField] = useState("")
-    const [editedField, seteditedField] = useState("")
-    const [formDesc, setFormDesc] = useState("")
+    const [editedField] = useState("")  // eslint-disable-next-line
+    // const [formDesc, setFormDesc] = useState("")  // eslint-disable-next-line
     const addQuestion = () => {
         const field = {
             'name': `question_${formContent.length}`,
