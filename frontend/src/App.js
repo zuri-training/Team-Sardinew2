@@ -25,12 +25,12 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/forgotPassword" element={<ForgotPassword />} />
-        <Route
+        {/* <Route path="/forgotPassword" element={<ForgotPassword />} /> */}
+        {/* <Route
           path="/resetPassword/:userId/:token"
           element={<ResetPassword />}
-        />
-        <Route path="/verified-password" element={<VerifiedPassword />} />
+        /> */}
+        {/* <Route path="/verified-password" element={<VerifiedPassword />} /> */}
         <Route path="/form/:id" element={<Form />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
