@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import authService from "./authService";
 
 // get user from localstorage
@@ -70,8 +70,9 @@ export const authSlice = createSlice({
       .addCase(register.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-
+        state.message = action.payload;
         state.user = action.payload;
+        // state.user = null;
       })
       .addCase(register.rejected, (state, action) => {
         state.isLoading = false;
