@@ -2,7 +2,7 @@
     "name": "backend",
     "version": "1.0.0",
     "description": "* NodeJS\r * Express Framework\r * MongoDB\r * Mongoose\r * Template engine: Pug\r * PostMan",
-    "main": "app.js",
+    "main": "../backend/src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon server.js"
