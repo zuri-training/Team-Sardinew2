@@ -1,6 +1,2 @@
-<<<<<<<<< Temporary merge branch 1
-node_modules
-=========
-node_modules/
-.env
->>>>>>>>> Temporary merge branch 2
+/node_modules
+

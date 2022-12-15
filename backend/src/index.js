@@ -1,13 +1,12 @@
-
 const express = require("express");
-// const connect = require("./config/database");
+const connect = require("./config/database");
 const cors = require("cors");
 const userRoute = require("./router/userRoutes");
 const responseRoute = require("./router/responseRoutes");
 const templateForm = require("./router/templateFormRoutes");
-
 const formRoute = require("./router/formRoutes");
-// connect(); //displays connects status on the console
+
+connect(); //displays connects status on the console
 
 const app = express();
 
@@ -33,4 +32,3 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = app;

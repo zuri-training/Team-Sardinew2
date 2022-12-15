@@ -4,13 +4,12 @@
     "description": "* NodeJS\r * Express Framework\r * MongoDB\r * Mongoose\r * Template engine: Pug\r * PostMan",
     "main": "app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon server.js"
+        "start": "node ./src/index.js",
+        "dev": "nodemon ./src/index.js"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "add-gitignore": "^1.1.1",
         "bcrypt": "^5.1.0",
         "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
