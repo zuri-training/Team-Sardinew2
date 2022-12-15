@@ -9,7 +9,6 @@ import Register from "./pages/Register";
 import NotFound from "./pages/Not-found";
 import Dashboard from "./pages/Dashboard";
 
-import Test from "./pages/Test";
 import Form from "./component/Form";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
@@ -23,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/home" element={<Home />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route

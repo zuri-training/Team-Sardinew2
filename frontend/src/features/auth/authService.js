@@ -1,6 +1,7 @@
 import axios from "axios";
 // caling endpoint
-const API_URL = "http://localhost:5000/user/";
+// const API_URL = "http://localhost:5000/user/";
+const API_URL = "https://feedback-api-rmi2.onrender.com/user/";
 // const API_URL = "https://feedback-api-fi7m.onrender.com/user/";
 
 const register = async (userData) => {

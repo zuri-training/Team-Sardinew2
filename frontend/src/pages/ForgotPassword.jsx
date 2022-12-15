@@ -2,7 +2,8 @@ import React from 'react';
 import { toast } from 'react-toastify'
 import logo from "../assets/images/Frame.png";
 import fbLogo from "../assets/images/feedbacker.png";
-const API_URL = "https://feedback-api-fi7m.onrender.com/user/";
+const API_URL = "https://feedback-api-rmi2.onrender.com/user/";
+// const API_URL = "https://feedback-api-fi7m.onrender.com/user/";
 
 
 const ForgotPassword = () => {
