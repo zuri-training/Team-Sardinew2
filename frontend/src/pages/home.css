@@ -37,7 +37,9 @@
   text-decoration: none;
 
 }
-
+.signup Link{
+  color: black;
+}
 /* banner section*/
 #banner {
   text-align: center;

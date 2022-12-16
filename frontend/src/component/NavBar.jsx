@@ -43,7 +43,7 @@ function NavBar() {
               </ul>
                    <form className="d-flex" role="search">
                        {user ? (
-                <button className="btn btn-outline-success signup" onChange={onLogout}><Link to="/login" >Logout</Link></button>
+                <button className="btn btn-outline-success signup" onClick={onLogout}>Logout</button>
                        
                        ): (
                     <>
