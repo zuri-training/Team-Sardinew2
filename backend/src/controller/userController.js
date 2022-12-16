@@ -182,7 +182,7 @@ exports.forgotPassword = async (req, res)=>{
         }
         
         let name = user.name.split(" ")[0];
-        const link = `${process.env.BASE_URL}/password-reset/${user._id}/${token.token}`;
+        const link = `${process.env.BASE_URL}resetPassword/${user._id}/${token.token}`;
         let htmlContent = "<h1 style='font:bold;'><strong>FeedBack Gen</strong></h1>"
         htmlContent += `<p>Hi, ${name} </p>`
         htmlContent += "<p>You're almost ready to access our feedback Generator.</p>"
