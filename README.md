@@ -27,7 +27,7 @@ A platform that allows users create feedback forms to be embedded on their platf
 
 | Codebase             |    Description     | Link                                                                                     |
 | :------------------- | :----------------: | ---------------------------------------------------------------------------------------- |
-| [Frontend](frontend) |       React        |
+| [Frontend](frontend) |       React        | https://team-sardinew2-jk6y-git-fork-zuri-training-main-damil27.vercel.app/              |
 | [Backend](backend)   | NodeJS and Mongodb | https://feedback-api-rmi2.onrender.com/                                                  |
 | [Mobile](backend)    |      Flutter       | https://appetize.io/app/n2hr6rii2bvbtbkys6ngcedgle?device=pixel4&osVersion=11.0&scale=75 |
 
